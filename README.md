@@ -1,5 +1,3 @@
-A **L-LIDE** parece ser uma ferramenta poderosa e versátil para desenvolvedores que trabalham com software de baixo nível. Aqui está um resumo detalhado com ênfase nas características adicionais e nos aspectos de customização que você mencionou:
-
 ### L-LIDE: Low-Level Integrated Development Environment
 
 **L-LIDE** é uma IDE desenvolvida para o desenvolvimento de software de baixo nível, com foco principal no sistema operacional Linux, mas com suporte também para Windows. É totalmente open-source e extremamente customizável, permitindo que os desenvolvedores moldem a ferramenta conforme suas necessidades específicas.
