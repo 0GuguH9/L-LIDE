@@ -1,84 +1,22 @@
 ### L-LIDE: Low-Level Integrated Development Environment
 
-**L-LIDE** é uma IDE desenvolvida para o desenvolvimento de software de baixo nível, com foco principal no sistema operacional Linux, mas com suporte também para Windows. É totalmente open-source e extremamente customizável, permitindo que os desenvolvedores moldem a ferramenta conforme suas necessidades específicas.
+**L-LIDE** is a IDE for low level software development in (mainly) Linux (will have suport for Windows). Is a totally open-source and extremely customizable software, so be free to help the IDE or for making your costumizations.
 
-### Características Principais
+### Features
 
-- **Foco em Baixo Nível**: Ideal para desenvolvimento de software que requer controle preciso sobre recursos de hardware e eficiência de execução.
-- **Integração com Ferramentas Linux**: Projetada para tirar o máximo proveito das ferramentas e ambientes de desenvolvimento disponíveis no Linux.
-- **Visualização de Código de Baixo Nível**: Capacidade de visualizar a tradução de código C para assembly e de assembly para binário.
-- **Extensível com Plugins**: Suporte a plugins para adicionar funcionalidades e personalizar a IDE. Os próprios suportes nativos são implementados como plugins, que podem ser desativados ou removidos conforme necessário.
-- **Totalmente Customizável**: A IDE permite que os desenvolvedores personalizem o HUD, apesar de isso não ser recomendado para todos os usuários devido à complexidade envolvida.
-- **Compatibilidade com Windows**: Suporte básico para Windows, embora com algumas limitações devido ao uso de GTK+ e gtkmm.
+- **Maded for Low-Level language**: having a good native suport for low-level languages like C, C++, assembly (current supporting x86 and x64) or software helpers/builders like CMake, Make, shell scripts, or frameworks/API like OpenGL, GTK+ and gtkmm.
+- **Maded for Linux**: by Linux users, for Linux users.
+- **Low-level code preview**: you can view a estimated more low-level of your current language (exemple, linkable binary for assembly, or linkable assembly for C/C++).
+- **Modificable with plugins**: you can modify entire IDE with plugins. You can change HUD widgets locations, colors (theme), configurations, or language.
 
-### Suporte a Diferentes Tecnologias
+### Warnings
 
-- **GTK+ e gtkmm**: Ferramentas e recursos para o desenvolvimento de interfaces gráficas no Linux.
-- **OpenGL**: Suporte para desenvolvimento gráfico e renderização de alto desempenho.
-- **CMake e Make**: Integração com sistemas de build populares.
-- **Shell Scripts (.sh)**: Suporte para automação de tarefas e scripts de shell.
-- **Assembly (.sx86, .x86, .x86.s)**: Suporte para várias extensões e estilos de código assembly, facilitando o trabalho com diferentes dialectos de assembly.
+- **Windows compatiblity**: the IDE use a custom wrapper for GTK+ to help making the window, and GTK+ can have errors in Windows, so sorry for that :(
 
-### Exemplos de Uso
+### Languages, Libs, Helpers or Builders compatibility checklist
 
-#### Escrevendo Código em C
-
-```c
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-#### Compilação e Depuração
-
-A L-LIDE fornece ferramentas integradas para compilar e depurar código de forma eficiente, simplificando o fluxo de trabalho do desenvolvedor.
-
-#### Visualização de Nível Inferior
-
-##### Código C para Assembly
-
-```assembly
-main:
-    push rbp
-    mov rbp, rsp
-    sub rsp, 16
-    mov edi, OFFSET FLAT:.LC0
-    call puts
-    mov eax, 0
-    leave
-    ret
-```
-
-##### Assembly para Binário
-
-```binary
-\x55\x48\x89\xe5\x48\x83\xec\x10\x48\xbf\x00\x00\x00\x00\x00\x00\x00\x00\xba\x00\x00\x00\x00\xb8\x00\x00\x00\x00\x5d\xc3
-```
-
-### Customização e Extensibilidade
-
-A **L-LIDE** permite que os desenvolvedores personalizem extensivamente a IDE, incluindo:
-
-- **Desativação/Remoção de Plugins**: Os plugins nativos podem ser desativados ou removidos, proporcionando um ambiente de desenvolvimento leve e personalizado.
-- **Customização do HUD**: Embora não seja recomendada para todos os usuários, a customização do HUD permite que os desenvolvedores alterem a interface da IDE para melhor se adequar às suas preferências.
-- **Adição de Novos Plugins**: Desenvolvedores podem criar e adicionar novos plugins para estender as funcionalidades da IDE.
-
-### Comunidade e Recursos
-
-**L-LIDE** está comprometida com a criação de uma comunidade ativa e colaborativa, oferecendo tutoriais e suporte para uma variedade de tecnologias, incluindo:
-
-- **GTK+ e gtkmm**: Desenvolvimento de interfaces gráficas no Linux.
-- **C e C++**: Recursos e ferramentas avançadas para programação de baixo nível.
-- **Assembly**: Ferramentas para desenvolvimento e visualização de código assembly.
-- **Night (Nova Linguagem)**: Suporte para sua nova linguagem de programação, Night, que combina a simplicidade do C com a segurança e a flexibilidade do Rust.
-
-### Futuro da L-LIDE
-
-**L-LIDE** está em constante evolução, com planos para expandir suas funcionalidades e melhorar o suporte para diferentes plataformas e linguagens de programação. Com uma base sólida em código aberto, a IDE continuará a crescer e se adaptar às necessidades dos desenvolvedores de software de baixo nível.
-
----
-
-A **L-LIDE** representa um passo significativo na criação de ferramentas de desenvolvimento de baixo nível, oferecendo uma flexibilidade e customização que permitem aos desenvolvedores adaptar a IDE às suas necessidades específicas. Se precisar de mais detalhes ou tiver outras sugestões, estou à disposição para ajudar!
+- ❌ **GTK+ e gtkmm**: native graphics libs/wrapper for apps in Linux.
+- ❌ **Custom GTK+ wrapper**: for helping making plugins for this IDE.
+- ❌ **CMake e Make**: common projects builders in Linux.
+- ❌ **Shell Scripts (.sh)**: shell scripts is a native Linux script for making commands or tasks easily. Its like .bat of windows.
+- ❌ **Assembly (x86 adn x64)**: most common assembly in desktops.
