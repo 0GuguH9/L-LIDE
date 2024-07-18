@@ -2,22 +2,22 @@
 
 using namespace LLIDE::Core;
 
-void Theme::addThemeToken(std::string id, std::string hexColor) {
+void Theme::addThemeToken(const std::string id, const TextStyle hexColor) {
 
     themeTokens[id] = hexColor;
 }
 
-void Theme::removeThemeToken(std::string id) {
+void Theme::removeThemeToken(const std::string id) {
 
     themeTokens.erase(id);
 }
 
-ThemeToken Theme::getThemeToken(std::string id) {
+ThemeToken Theme::getThemeToken(const std::string id) {
 
     auto findReturn = themeTokens.find(id);
 
     if (findReturn == themeTokens.end())
-        return {id, "#FFFFFF"};
+        return {id, defaultTextStyle};
 
     return {id, themeTokens[id]};
 }
